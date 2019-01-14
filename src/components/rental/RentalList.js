@@ -1,6 +1,8 @@
 import React from 'react';
 import {RentalCard} from './RentalCard'
 import {connect} from 'react-redux';
+import * as actions from '../../actions';
+
 class RentalList extends React.Component {
   
   
@@ -14,6 +16,10 @@ class RentalList extends React.Component {
                     colNum='col-md-3 col-xs-6' />
       )
     })
+  }
+
+  componentWillMount(){
+    this.props.dispatch(actions.fetchRentals())
   }
 
 
@@ -33,7 +39,7 @@ class RentalList extends React.Component {
 
 function mapStateToProps(state){
   return {
-    rentals: state.rentals
+    rentals: state.rentals.data
   }
 }
 

@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Redirect} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {Header} from './shared/Header';
 import RentalList from './components/rental/RentalList';
-import {RentalDetail} from './components/rental/RentalDetail';
+import RentalDetail from './components/rental/RentalDetail';
 
 import './App.css';
 
@@ -15,7 +15,6 @@ class App extends Component {
 
   
   render() {
-
     return (
       <Provider store={store}>
           <BrowserRouter>
