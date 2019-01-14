@@ -1,4 +1,6 @@
-import {FETCH_RENTALS, FETCH_RENTAL_BY_ID} from './types';
+import {FETCH_RENTALS,
+        FETCH_RENTAL_BY_ID_SUCCESS, 
+        FETCH_RENTAL_BY_ID_INIT} from './types';
 
 const rentals = [{
   id: 1,
@@ -53,6 +55,13 @@ const rentals = [{
   createdAt: "24/12/2017"
 }]
 
+const fetchRentalByIdInit = () => {
+
+  return {
+    type: FETCH_RENTAL_BY_ID_INIT
+  }
+}
+
 
 export const fetchRentals = () => {
   
@@ -64,9 +73,24 @@ export const fetchRentals = () => {
 
 
 export const fetchRentalById = (rentalId) => {
-  const rental = rentals.find((rental) => String(rental.id) === rentalId);
+  
+  return function(dispatch){
+    dispatch(fetchRentalByIdInit());
+    setTimeout(() => {
+    const  rental = rentals.find((rental) => String(rental.id) === rentalId);
+    
+      dispatch(fetchRentalByIdSuccess(rental))
+    }, 1000)
+   
+  }
+
+}
+
+
+
+const fetchRentalByIdSuccess = (rental) => {
   return {
-    type: FETCH_RENTAL_BY_ID,
+    type: FETCH_RENTAL_BY_ID_SUCCESS,
     rental
   }
 }
