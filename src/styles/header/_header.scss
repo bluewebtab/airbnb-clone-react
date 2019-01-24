@@ -1,7 +1,6 @@
 .navbar {
-  padding: 20px;
-  margin-bottom: 40px;
-  background-color: $main-black-color;
+  margin: 20px;
+  background-color: $main-white-color;
 
   .bwm-search {
     height: 50px;
@@ -18,6 +17,7 @@
 
   .nav-item {
     font-size: 14px;
+    
   }
 
   .btn-bwm-search {
@@ -33,6 +33,6 @@
   }
 
   .nav-item {
-    color: $main-white-color;
+   color:$gray-color !important;
   }
 }
