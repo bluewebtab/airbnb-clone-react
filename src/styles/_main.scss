@@ -1,7 +1,7 @@
 @import 'variables.scss';
 @import 'header/header.scss';
 @import 'rental/rental-listing.scss';
-
+@import 'rental/rental-detail.scss';
 
 .page-title {
   font-size: 30px;
@@ -19,4 +19,13 @@
 
 .condo {
   color: #d68000;
+}
+
+.mainSection{
+  background-color: $light-gray-color;
+
+}
+
+.mainpics {
+  padding-top: 40px;
 }

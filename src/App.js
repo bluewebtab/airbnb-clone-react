@@ -20,10 +20,12 @@ class App extends Component {
           <BrowserRouter>
             <div className="App">
               <Header />
-              <div className='container'>   
-                <Route exact path="/" render={() => {return <Redirect to='/rentals' /> }} />
-                <Route exact path="/rentals" component={RentalListing} />
-                <Route exact path="/rentals/:id" component={RentalDetail} />
+              <div className='mainSection'>
+                <div className='mainpics container'>   
+                  <Route exact path="/" render={() => {return <Redirect to='/rentals' /> }} />
+                  <Route exact path="/rentals" component={RentalListing} />
+                  <Route exact path="/rentals/:id" component={RentalDetail} />
+                </div>
               </div>
             
             </div>
