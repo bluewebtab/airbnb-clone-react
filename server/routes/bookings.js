@@ -1,9 +1,12 @@
-// const express = require('express')
-// const router = express.Router();
-// const BookingCtrl = require('../controllers/booking')
+const express = require('express')
+const router = express.Router();
 
-// router.post('', BookingCtrl.createBooking);
+const UserCtrl = require('../controllers/user');
+const BookingCtrl = require('../controllers/booking');
+
+
+router.post('', UserCtrl.authMiddleware, BookingCtrl.createBooking );
 
 
 
-// module.exports = router;
+module.exports = router;
