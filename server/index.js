@@ -11,7 +11,7 @@ const rentalRoutes = require('./routes/rentals'),
 
 mongoose.connect(config.DB_URI).then(() => {
   const fakeDb = new FakeDb();
-  fakeDb.seedDb();
+  // fakeDb.seedDb();
 })
 
 app.use(bodyParser.json())
