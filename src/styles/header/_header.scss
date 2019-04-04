@@ -17,14 +17,15 @@
 
   .nav-item {
     font-size: 14px;
-    
   }
 
   .btn-bwm-search {
     border-color: $main-color;
     color: $main-color;
 
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       background-color: transparent !important;
       border-color: $main-color !important;
       color: $main-color !important;
@@ -33,14 +34,14 @@
   }
 
   .nav-item {
-   color:$gray-color !important;
+    color: $gray-color !important;
   }
 
   .dropdown-menu {
-    .dropdown-item{
+    .dropdown-item {
       font-size: 14px;
 
-      &:active{
+      &:active {
         background-color: $main-color;
       }
     }

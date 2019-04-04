@@ -7,6 +7,8 @@ export const rentalType = (isShared) => {
 
 export const toUpperCase = value => value ? titleize(value) : ''
 
+export const prettifyDate = date => moment(date).format('MM/DD/YY')
+
 export const getRangeOfDates = (startAt, endAt, dateFormat = 'Y/MM/DD') => {
   const tempDates = [];
   const mEndAt = moment(endAt);
