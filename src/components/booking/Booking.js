@@ -149,7 +149,7 @@ class Booking extends React.Component {
         <hr />
         {!isAuth && (
           <Link
-            className="btn btn-bwm btm-confirm btm-block"
+            className="btn btn-bwm btn-confirm btn-block"
             to={{ pathname: "/login" }}
           >
             Login to book place.
