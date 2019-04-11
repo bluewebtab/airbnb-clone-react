@@ -25,3 +25,5 @@ yarn-error.log*
 
 /server/config/dev.js
 .vscode
+
+yarn.lock
