@@ -1,10 +1,8 @@
-import React from 'react';
-import {MapWithGeocode} from '../../map/GoogleMap';
+import React from "react";
+import { MapWithGeocode } from "../../map/GoogleMap";
 
 export class RentalMap extends React.Component {
-
-
-  render(){
+  render() {
     const location = this.props.location;
     return (
       <MapWithGeocode
@@ -14,6 +12,6 @@ export class RentalMap extends React.Component {
         mapElement={<div style={{ height: `100%` }} />}
         location={location}
       />
-    )
+    );
   }
 }
