@@ -49,14 +49,25 @@ export class RentalManageCard extends React.Component {
           <div className="card-footer text-muted">
             Created at {prettifyDate(rental.createdAt)}
             {!wantDelete && (
-              <button
-                onClick={() => {
-                  this.showDeleteMenu();
-                }}
-                className="btn btn-danger"
-              >
-                Delete
-              </button>
+              <React.Fragment>
+                <button
+                  onClick={() => {
+                    this.showDeleteMenu();
+                  }}
+                  className="btn btn-danger"
+                >
+                  Delete
+                </button>
+                <Link
+                  className="btn btn-warning"
+                  to={{
+                    pathname: `/rentals/${rental._id}`,
+                    state: { isUpdate: true }
+                  }}
+                >
+                  Edit
+                </Link>
+              </React.Fragment>
             )}
             {wantDelete && (
               <div className="delete-menu">
